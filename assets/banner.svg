@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="50%" stop-color="#0c1224" />
+      <stop offset="100%" stop-color="#120c24" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accent-cyan-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#7928CA" />
+      <stop offset="100%" stop-color="#FF0080" />
+    </linearGradient>
+
+    <linearGradient id="mesh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#FF0080" stop-opacity="0.05" />
+    </linearGradient>
+
+    <radialGradient id="glow-cyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-magenta" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#FF007A" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#FF007A" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filters -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Dynamic Styles & Keyframes -->
+    <style>
+      .grid-line {
+        stroke: #1e293b;
+        stroke-width: 1;
+        opacity: 0.35;
+      }
+      .pulse-circle {
+        animation: pulse 4s ease-in-out infinite alternate;
+      }
+      .scan-beam {
+        animation: scan 6s linear infinite;
+      }
+      .node-pulse {
+        animation: nodeFlash 3s ease-in-out infinite;
+      }
+      .float-badge-1 {
+        animation: floatA 5s ease-in-out infinite alternate;
+      }
+      .float-badge-2 {
+        animation: floatB 6s ease-in-out infinite alternate;
+      }
+      .float-badge-3 {
+        animation: floatC 5.5s ease-in-out infinite alternate;
+      }
+      .signal-line {
+        stroke-dasharray: 8 12;
+        animation: dashFlow 12s linear infinite;
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(0.98); opacity: 0.3; }
+        100% { transform: scale(1.03); opacity: 0.7; }
+      }
+      @keyframes scan {
+        0% { transform: translateY(-120px); opacity: 0; }
+        15% { opacity: 0.8; }
+        85% { opacity: 0.8; }
+        100% { transform: translateY(380px); opacity: 0; }
+      }
+      @keyframes nodeFlash {
+        0%, 100% { opacity: 0.4; r: 4px; }
+        50% { opacity: 1; r: 7px; filter: drop-shadow(0 0 6px #00F0FF); }
+      }
+      @keyframes floatA {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-10px) rotate(1deg); }
+      }
+      @keyframes floatB {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(12px) rotate(-1.5deg); }
+      }
+      @keyframes floatC {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-8px) rotate(-1deg); }
+      }
+      @keyframes dashFlow {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Ambient Glows -->
+  <circle cx="200" cy="100" r="280" fill="url(#glow-cyan)" />
+  <circle cx="1020" cy="240" r="260" fill="url(#glow-magenta)" />
+
+  <!-- Background Decorative Grid Lines -->
+  <g class="grid-line">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Animated Diagnostic Radar / Signal Paths in Background -->
+  <g opacity="0.45">
+    <path d="M 80,180 Q 300,50 600,180 T 1120,180" fill="none" stroke="#00F0FF" stroke-width="1.5" class="signal-line" />
+    <path d="M 80,210 Q 350,330 650,210 T 1120,210" fill="none" stroke="#FF0080" stroke-width="1.5" class="signal-line" style="animation-duration: 9s;" />
+  </g>
+
+  <!-- Animated Dynamic Nodes (Telemetry Spans) -->
+  <circle cx="220" cy="115" r="5" fill="#00F0FF" class="node-pulse" style="animation-delay: 0s;" />
+  <circle cx="340" cy="270" r="4" fill="#00FF88" class="node-pulse" style="animation-delay: 1.2s;" />
+  <circle cx="860" cy="95" r="5" fill="#FFB800" class="node-pulse" style="animation-delay: 0.7s;" />
+  <circle cx="980" cy="250" r="6" fill="#FF0080" class="node-pulse" style="animation-delay: 1.8s;" />
+  <circle cx="560" cy="45" r="4" fill="#00F0FF" class="node-pulse" style="animation-delay: 2.3s;" />
+
+  <!-- Animated Scanning Beam (Constrained to background) -->
+  <g opacity="0.3" class="scan-beam">
+    <rect x="0" y="0" width="1200" height="4" fill="url(#accent-cyan-purple)" filter="url(#neon-glow)" />
+  </g>
+
+  <!-- Interactive Floating Diagnostic Metric Cards (Sides, non-intrusive) -->
+  <g class="float-badge-1" transform="translate(60, 45)">
+    <rect width="185" height="40" rx="8" fill="#0e172a" stroke="#00F0FF" stroke-width="1.2" opacity="0.85" filter="url(#shadow)" />
+    <circle cx="20" cy="20" r="5" fill="#00FF88" />
+    <text x="34" y="24" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Faithfulness: 99.4%</text>
+  </g>
+
+  <g class="float-badge-2" transform="translate(950, 48)">
+    <rect width="195" height="40" rx="8" fill="#0e172a" stroke="#FF0080" stroke-width="1.2" opacity="0.85" filter="url(#shadow)" />
+    <circle cx="20" cy="20" r="5" fill="#FF0080" />
+    <text x="34" y="24" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Hallucination: 0.01%</text>
+  </g>
+
+  <g class="float-badge-3" transform="translate(970, 275)">
+    <rect width="175" height="40" rx="8" fill="#0e172a" stroke="#7928CA" stroke-width="1.2" opacity="0.85" filter="url(#shadow)" />
+    <circle cx="20" cy="20" r="5" fill="#00F0FF" />
+    <text x="34" y="24" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Context Recall: 98.2%</text>
+  </g>
+
+  <g class="float-badge-1" transform="translate(50, 275)">
+    <rect width="185" height="40" rx="8" fill="#0e172a" stroke="#00FF88" stroke-width="1.2" opacity="0.85" filter="url(#shadow)" />
+    <circle cx="20" cy="20" r="5" fill="#00FF88" />
+    <text x="34" y="24" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Trace Latency: 142ms</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header, Title, Subtitle, Badges (Crisp, High Contrast, Always on Top) -->
+  <g id="foreground-content" transform="translate(600, 0)">
+    <!-- Pill Category Tag -->
+    <g transform="translate(-180, 75)">
+      <rect width="360" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.95" />
+      <circle cx="20" cy="14" r="4" fill="#38bdf8" />
+      <text x="180" y="19" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">PRODUCTION LLM &amp; RAG DIAGNOSTICS</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="165" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.8" filter="url(#shadow)">
+      <tspan fill="#FFFFFF">Awesome </tspan>
+      <tspan fill="url(#accent-cyan-purple)">RAG Diagnostics</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="206" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="500">
+      Curated Ecosystem for Retrieval Quality, Hallucination Detection &amp; LLM Observability
+    </text>
+
+    <!-- Feature Pillars -->
+    <g transform="translate(-320, 235)">
+      <!-- Item 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="195" height="32" rx="6" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="97" y="21" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">🔍 Retrieval Benchmarking</text>
+      </g>
+      <!-- Item 2 -->
+      <g transform="translate(225, 0)">
+        <rect width="195" height="32" rx="6" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="97" y="21" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">🛡️ Hallucination Defense</text>
+      </g>
+      <!-- Item 3 -->
+      <g transform="translate(450, 0)">
+        <rect width="195" height="32" rx="6" fill="#111827" stroke="#334155" stroke-width="1" />
+        <text x="97" y="21" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">📊 Production LLM-as-Judge</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Border Outline -->
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="15.5" stroke="#334155" stroke-width="1" stroke-opacity="0.6" />
+</svg>
