@@ -55,64 +55,64 @@ The table below benchmarks premier commercial platforms for LLM evaluation, RAG 
 
 ## 💻 Open-Source GitHub Projects
 
-Explore the leading open-source frameworks for self-hosted RAG diagnostics, continuous evaluation, and red teaming. Repositories are **sorted in descending order by GitHub star count**.
+Explore the leading open-source frameworks for self-hosted RAG diagnostics, continuous evaluation, and red teaming. Repositories are **sorted in descending order by GitHub Stars_Count**.
 
-### 1. **[Langfuse](https://github.com/langfuse/langfuse)** [![GitHub stars](https://img.shields.io/github/stars/langfuse/langfuse?style=social&color=white)](https://github.com/langfuse/langfuse/stargazers)
+### 1. **[Langfuse](https://github.com/langfuse/langfuse)** [![GitHub_Stars](https://img.shields.io/github/stars/langfuse/langfuse?style=social&color=white)](https://github.com/langfuse/langfuse/stargazers)
 * **Description**: **Full-platform open-source LLM engineering and observability platform.** Built on OpenTelemetry standards, Langfuse provides deep instrumentation for RAG pipelines and multi-agent workflows. It supports offline dataset experiments, prompt versioning, automated LLM-as-a-judge scoring, and CI/CD automated regression tests via GitHub Actions.
 * **Key Features**: Tracing across OpenAI, LangChain, LlamaIndex, LiteLLM; evaluation datasets; latency, token, and cost tracking; fully self-hostable with Docker &amp; Kubernetes.
 * **License**: MIT 📄
 
-### 2. **[Promptfoo](https://github.com/promptfoo/promptfoo)** [![GitHub stars](https://img.shields.io/github/stars/promptfoo/promptfoo?style=social&color=white)](https://github.com/promptfoo/promptfoo/stargazers)
+### 2. **[Promptfoo](https://github.com/promptfoo/promptfoo)** [![GitHub_Stars](https://img.shields.io/github/stars/promptfoo/promptfoo?style=social&color=white)](https://github.com/promptfoo/promptfoo/stargazers)
 * **Description**: **Test-driven LLM evaluation, security red-teaming, and RAG benchmarking CLI.** Evaluates prompts, RAG retrievers, and agent responses against user-defined assertions (semantic similarity, BLEU/ROUGE, model-graded metrics, and hallucination probes).
 * **Key Features**: Lightweight CLI (`promptfoo eval`), red-teaming against prompt injections and jailbreaks, declarative YAML test suites, deterministic caching, and GitHub Actions CI integrations.
 * **License**: MIT 📄
 
-### 3. **[DeepEval](https://github.com/confident-ai/deepeval)** [![GitHub stars](https://img.shields.io/github/stars/confident-ai/deepeval?style=social&color=white)](https://github.com/confident-ai/deepeval/stargazers)
+### 3. **[DeepEval](https://github.com/confident-ai/deepeval)** [![GitHub_Stars](https://img.shields.io/github/stars/confident-ai/deepeval?style=social&color=white)](https://github.com/confident-ai/deepeval/stargazers)
 * **Description**: **"The pytest for LLMs" — Production evaluation and diagnostic framework.** DeepEval treats LLM and RAG testing like unit tests. It introduces G-Eval (research-backed criteria-based evaluation), synthetic goldens generation, conversational test cases, and agent trajectory diagnostics.
 * **Key Features**: 14+ research metrics (Faithfulness, Answer Relevancy, Contextual Precision, Contextual Recall, Hallucination, Bias, Toxicity); `@observe` decorator; CLI (`deepeval test run`).
 * **License**: Apache-2.0 📄
 
-### 4. **[Ragas](https://github.com/explodinggradients/ragas)** [![GitHub stars](https://img.shields.io/github/stars/explodinggradients/ragas?style=social&color=white)](https://github.com/explodinggradients/ragas/stargazers)
+### 4. **[Ragas](https://github.com/explodinggradients/ragas)** [![GitHub_Stars](https://img.shields.io/github/stars/explodinggradients/ragas?style=social&color=white)](https://github.com/explodinggradients/ragas/stargazers)
 * **Description**: **The foundational reference framework for RAG evaluation.** Pioneered the standard formulation of RAG evaluation metrics without requiring extensive human-annotated ground-truth datasets.
 * **Key Features**: Research-backed metrics (Faithfulness, Answer Relevance, Context Precision, Context Recall, Context Entities Recall, Noise Sensitivity, Factual Correctness); automated synthetic test dataset generation; CLI templates (`ragas quickstart`, `ragas evals`).
 * **License**: Apache-2.0 📄
 
-### 5. **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** [![GitHub stars](https://img.shields.io/github/stars/Arize-ai/phoenix?style=social&color=white)](https://github.com/Arize-ai/phoenix/stargazers)
+### 5. **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** [![GitHub_Stars](https://img.shields.io/github/stars/Arize-ai/phoenix?style=social&color=white)](https://github.com/Arize-ai/phoenix/stargazers)
 * **Description**: **AI observability, real-time tracing, and evaluation workbench.** Native OpenTelemetry engine for tracing LLM chains, agent execution loops, and vector database queries. Enables local execution or enterprise self-hosting with PostgreSQL persistence.
 * **Key Features**: Local CLI (`uvx arize-phoenix serve`), 3D UMAP vector embedding cluster visualization to diagnose retrieval blind spots, LLM-as-a-judge benchmark evaluators, and automatic span instrumentation.
 * **License**: MIT 📄
 
-### 6. **[Giskard](https://github.com/Giskard-AI/giskard)** [![GitHub stars](https://img.shields.io/github/stars/Giskard-AI/giskard?style=social&color=white)](https://github.com/Giskard-AI/giskard/stargazers)
+### 6. **[Giskard](https://github.com/Giskard-AI/giskard)** [![GitHub_Stars](https://img.shields.io/github/stars/Giskard-AI/giskard?style=social&color=white)](https://github.com/Giskard-AI/giskard/stargazers)
 * **Description**: **Adversarial RAG diagnostics, automated red teaming, and quality audits.** Provides comprehensive scan suites to detect hallucinations, sycophancy, sensitive information leakage, and retrieval omissions.
 * **Key Features**: `vulnerability_scan` for security probes; `quality_scan` for hallucination detection; component blame attribution (`component:retrieval` vs. `component:llm`); automated adversarial scenario generators.
 * **License**: Apache-2.0 📄
 
-### 7. **[TruLens](https://github.com/truera/trulens)** [![GitHub stars](https://img.shields.io/github/stars/truera/trulens?style=social&color=white)](https://github.com/truera/trulens/stargazers)
+### 7. **[TruLens](https://github.com/truera/trulens)** [![GitHub_Stars](https://img.shields.io/github/stars/truera/trulens?style=social&color=white)](https://github.com/truera/trulens/stargazers)
 * **Description**: **Evaluation and observability framework centered on the "RAG Triad".** Systematic verification that every generated token is grounded in retrieved context and directly addresses the user request.
 * **Key Features**: RAG Triad feedback functions (Context Relevance, Groundedness, Answer Relevance); agent trace evaluation (Plan Adherence, Execution Efficiency, Tool Selection); MLflow and LangChain integrations.
 * **License**: Apache-2.0 📄
 
-### 8. **[UpTrain](https://github.com/uptrain-ai/uptrain)** [![GitHub stars](https://img.shields.io/github/stars/uptrain-ai/uptrain?style=social&color=white)](https://github.com/uptrain-ai/uptrain/stargazers)
+### 8. **[UpTrain](https://github.com/uptrain-ai/uptrain)** [![GitHub_Stars](https://img.shields.io/github/stars/uptrain-ai/uptrain?style=social&color=white)](https://github.com/uptrain-ai/uptrain/stargazers)
 * **Description**: **Open-source LLM evaluation toolkit with 20+ pre-configured diagnostic checks.** Diagnoses failures across generation quality, retrieval quality, language tone, and conversational guidelines.
 * **Key Features**: Context relevance, response completeness, factual accuracy, hallucination detection, prompt injection checks, and root-cause failure analysis dashboards.
 * **License**: Apache-2.0 📄
 
-### 9. **[OpenInference](https://github.com/Arize-ai/openinference)** [![GitHub stars](https://img.shields.io/github/stars/Arize-ai/openinference?style=social&color=white)](https://github.com/Arize-ai/openinference/stargazers)
+### 9. **[OpenInference](https://github.com/Arize-ai/openinference)** [![GitHub_Stars](https://img.shields.io/github/stars/Arize-ai/openinference?style=social&color=white)](https://github.com/Arize-ai/openinference/stargazers)
 * **Description**: **OpenTelemetry semantic conventions and instrumentation packages for LLM, RAG, and agent applications.** Standardizes how retrieval queries, vector search documents, prompt tokens, and tool calls are captured into telemetry spans across Python and TypeScript.
 * **Key Features**: Auto-instrumentation for LangChain, LlamaIndex, DSPy, Haystack, LiteLLM, OpenAI, and Anthropic.
 * **License**: Apache-2.0 📄
 
-### 10. **[Continuous-Eval](https://github.com/relari-ai/continuous-eval)** [![GitHub stars](https://img.shields.io/github/stars/relari-ai/continuous-eval?style=social&color=white)](https://github.com/relari-ai/continuous-eval/stargazers)
+### 10. **[Continuous-Eval](https://github.com/relari-ai/continuous-eval)** [![GitHub_Stars](https://img.shields.io/github/stars/relari-ai/continuous-eval?style=social&color=white)](https://github.com/relari-ai/continuous-eval/stargazers)
 * **Description**: **Modular open-source evaluation framework for RAG and LLM systems.** Combines deterministic matching, semantic similarity, and LLM-as-a-judge approaches with granular pipeline breakdown.
 * **Key Features**: Modular evaluation graphs, synthetic dataset generation, component-level blame attribution, and multi-turn conversational evaluation.
 * **License**: Apache-2.0 📄
 
-### 11. **[Tonic Validate](https://github.com/TonicAI/tonic_validate)** [![GitHub stars](https://img.shields.io/github/stars/TonicAI/tonic_validate?style=social&color=white)](https://github.com/TonicAI/tonic_validate/stargazers)
+### 11. **[Tonic Validate](https://github.com/TonicAI/tonic_validate)** [![GitHub_Stars](https://img.shields.io/github/stars/TonicAI/tonic_validate?style=social&color=white)](https://github.com/TonicAI/tonic_validate/stargazers)
 * **Description**: **Lightweight developer SDK for scoring RAG answer consistency and retrieval accuracy.** Integrates easily into unit testing suites, local Jupyter notebooks, and CI pipelines.
 * **Key Features**: `ValidateScorer`, Answer Consistency metric, Augmentation Accuracy metric, multi-model evaluation runners (OpenAI, Anthropic Claude, AWS Bedrock).
 * **License**: MIT 📄
 
-### 12. **[OpenAgent Eval](https://github.com/OpenAgentHQ/openagent-eval)** [![GitHub stars](https://img.shields.io/github/stars/OpenAgentHQ/openagent-eval?style=social&color=white)](https://github.com/OpenAgentHQ/openagent-eval/stargazers)
+### 12. **[OpenAgent Eval](https://github.com/OpenAgentHQ/openagent-eval)** [![GitHub_Stars](https://img.shields.io/github/stars/OpenAgentHQ/openagent-eval?style=social&color=white)](https://github.com/OpenAgentHQ/openagent-eval/stargazers)
 * **Description**: **Local-first, privacy-focused RAG and agent evaluation CLI.** Requires zero external cloud accounts or third-party telemetric tracking.
 * **Key Features**: 18+ metrics across retrieval (MRR, NDCG, Precision@K) and generation (Faithfulness, NLI similarity); Corpus Health Auditor; component fault localization (`oaeval audit`, `oaeval diagnose`).
 * **License**: Apache-2.0 📄
